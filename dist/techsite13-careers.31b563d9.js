@@ -27998,22 +27998,26 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
-var _browser = require("@emailjs/browser");
-var _browserDefault = parcelHelpers.interopDefault(_browser);
 var _s = $RefreshSig$();
 const Contact = ()=>{
     _s();
-    const form = (0, _react.useRef)();
     const [status, setStatus] = (0, _react.useState)("");
-    const sendEmail = (e)=>{
+    const sendEmail = async (e)=>{
         e.preventDefault();
         setStatus("sending");
-        (0, _browserDefault.default).sendForm("service_19px7xt", "template_hxvren9", form.current, "AD9kASCtB252sXVHL").then(()=>{
-            setStatus("success");
-            form.current.reset();
-        }, ()=>{
+        const formData = new FormData(e.target);
+        try {
+            const res = await fetch("https://techport13-applicant-form.bpt3creations.workers.dev", {
+                method: "POST",
+                body: formData
+            });
+            if (res.ok) {
+                setStatus("success");
+                e.target.reset();
+            } else setStatus("error");
+        } catch  {
             setStatus("error");
-        });
+        }
     };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("section", {
         id: "contact",
@@ -28029,20 +28033,20 @@ const Contact = ()=>{
                             children: "Contact"
                         }, void 0, false, {
                             fileName: "src/Components/Contact.jsx",
-                            lineNumber: 27,
+                            lineNumber: 33,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                             children: "Here at Techport13 we love making connections and meeting new people. If you're interested in joining our team or getting to know us, please send us a message and we will get back to you soon."
                         }, void 0, false, {
                             fileName: "src/Components/Contact.jsx",
-                            lineNumber: 28,
+                            lineNumber: 34,
                             columnNumber: 11
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/Components/Contact.jsx",
-                    lineNumber: 26,
+                    lineNumber: 32,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -28057,32 +28061,32 @@ const Contact = ()=>{
                                         className: "bx bx-map"
                                     }, void 0, false, {
                                         fileName: "src/Components/Contact.jsx",
-                                        lineNumber: 38,
+                                        lineNumber: 44,
                                         columnNumber: 15
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
                                         children: "Our Address"
                                     }, void 0, false, {
                                         fileName: "src/Components/Contact.jsx",
-                                        lineNumber: 39,
+                                        lineNumber: 45,
                                         columnNumber: 15
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                                         children: "4505 Peachtree Lakes Dr, Berkeley Lake, GA 30096"
                                     }, void 0, false, {
                                         fileName: "src/Components/Contact.jsx",
-                                        lineNumber: 40,
+                                        lineNumber: 46,
                                         columnNumber: 15
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/Components/Contact.jsx",
-                                lineNumber: 37,
+                                lineNumber: 43,
                                 columnNumber: 13
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/Components/Contact.jsx",
-                            lineNumber: 36,
+                            lineNumber: 42,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -28094,32 +28098,32 @@ const Contact = ()=>{
                                         className: "bx bx-envelope"
                                     }, void 0, false, {
                                         fileName: "src/Components/Contact.jsx",
-                                        lineNumber: 46,
+                                        lineNumber: 52,
                                         columnNumber: 15
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
                                         children: "Email Us"
                                     }, void 0, false, {
                                         fileName: "src/Components/Contact.jsx",
-                                        lineNumber: 47,
+                                        lineNumber: 53,
                                         columnNumber: 15
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                                         children: "careers@techport13.com"
                                     }, void 0, false, {
                                         fileName: "src/Components/Contact.jsx",
-                                        lineNumber: 48,
+                                        lineNumber: 54,
                                         columnNumber: 15
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/Components/Contact.jsx",
-                                lineNumber: 45,
+                                lineNumber: 51,
                                 columnNumber: 13
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/Components/Contact.jsx",
-                            lineNumber: 44,
+                            lineNumber: 50,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -28131,38 +28135,38 @@ const Contact = ()=>{
                                         className: "bx bx-phone-call"
                                     }, void 0, false, {
                                         fileName: "src/Components/Contact.jsx",
-                                        lineNumber: 54,
+                                        lineNumber: 60,
                                         columnNumber: 15
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
                                         children: "Call Us"
                                     }, void 0, false, {
                                         fileName: "src/Components/Contact.jsx",
-                                        lineNumber: 55,
+                                        lineNumber: 61,
                                         columnNumber: 15
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                                         children: "+1 (404) 919-2660"
                                     }, void 0, false, {
                                         fileName: "src/Components/Contact.jsx",
-                                        lineNumber: 56,
+                                        lineNumber: 62,
                                         columnNumber: 15
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/Components/Contact.jsx",
-                                lineNumber: 53,
+                                lineNumber: 59,
                                 columnNumber: 13
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/Components/Contact.jsx",
-                            lineNumber: 52,
+                            lineNumber: 58,
                             columnNumber: 11
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/Components/Contact.jsx",
-                    lineNumber: 35,
+                    lineNumber: 41,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -28183,18 +28187,17 @@ const Contact = ()=>{
                                 title: "Techport13 Location"
                             }, void 0, false, {
                                 fileName: "src/Components/Contact.jsx",
-                                lineNumber: 63,
+                                lineNumber: 69,
                                 columnNumber: 13
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/Components/Contact.jsx",
-                            lineNumber: 62,
+                            lineNumber: 68,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                             className: "col-lg-6",
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("form", {
-                                ref: form,
                                 onSubmit: sendEmail,
                                 className: "php-email-form",
                                 children: [
@@ -28205,42 +28208,108 @@ const Contact = ()=>{
                                                 className: "col-md-6 form-group",
                                                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
                                                     type: "text",
-                                                    name: "from_name",
+                                                    name: "applicant_name",
                                                     className: "form-control",
                                                     placeholder: "Your Name",
                                                     required: true
                                                 }, void 0, false, {
                                                     fileName: "src/Components/Contact.jsx",
-                                                    lineNumber: 77,
+                                                    lineNumber: 83,
                                                     columnNumber: 19
                                                 }, undefined)
                                             }, void 0, false, {
                                                 fileName: "src/Components/Contact.jsx",
-                                                lineNumber: 76,
+                                                lineNumber: 82,
                                                 columnNumber: 17
                                             }, undefined),
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                                 className: "col-md-6 form-group mt-3 mt-md-0",
                                                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
                                                     type: "email",
-                                                    name: "email_address",
+                                                    name: "applicant_email",
                                                     className: "form-control",
                                                     placeholder: "Your Email",
                                                     required: true
                                                 }, void 0, false, {
                                                     fileName: "src/Components/Contact.jsx",
-                                                    lineNumber: 80,
+                                                    lineNumber: 86,
                                                     columnNumber: 19
                                                 }, undefined)
                                             }, void 0, false, {
                                                 fileName: "src/Components/Contact.jsx",
-                                                lineNumber: 79,
+                                                lineNumber: 85,
                                                 columnNumber: 17
                                             }, undefined)
                                         ]
                                     }, void 0, true, {
                                         fileName: "src/Components/Contact.jsx",
-                                        lineNumber: 75,
+                                        lineNumber: 81,
+                                        columnNumber: 15
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "form-group mt-3",
+                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("select", {
+                                            name: "source",
+                                            className: "form-control",
+                                            required: true,
+                                            children: [
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                                                    value: "",
+                                                    children: "How did you hear about us?"
+                                                }, void 0, false, {
+                                                    fileName: "src/Components/Contact.jsx",
+                                                    lineNumber: 91,
+                                                    columnNumber: 19
+                                                }, undefined),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                                                    value: "LinkedIn",
+                                                    children: "LinkedIn"
+                                                }, void 0, false, {
+                                                    fileName: "src/Components/Contact.jsx",
+                                                    lineNumber: 92,
+                                                    columnNumber: 19
+                                                }, undefined),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                                                    value: "Indeed",
+                                                    children: "Indeed"
+                                                }, void 0, false, {
+                                                    fileName: "src/Components/Contact.jsx",
+                                                    lineNumber: 93,
+                                                    columnNumber: 19
+                                                }, undefined),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                                                    value: "Referral",
+                                                    children: "Referral"
+                                                }, void 0, false, {
+                                                    fileName: "src/Components/Contact.jsx",
+                                                    lineNumber: 94,
+                                                    columnNumber: 19
+                                                }, undefined),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                                                    value: "Company Website",
+                                                    children: "Company Website"
+                                                }, void 0, false, {
+                                                    fileName: "src/Components/Contact.jsx",
+                                                    lineNumber: 95,
+                                                    columnNumber: 19
+                                                }, undefined),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                                                    value: "Other",
+                                                    children: "Other"
+                                                }, void 0, false, {
+                                                    fileName: "src/Components/Contact.jsx",
+                                                    lineNumber: 96,
+                                                    columnNumber: 19
+                                                }, undefined)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "src/Components/Contact.jsx",
+                                            lineNumber: 90,
+                                            columnNumber: 17
+                                        }, undefined)
+                                    }, void 0, false, {
+                                        fileName: "src/Components/Contact.jsx",
+                                        lineNumber: 89,
                                         columnNumber: 15
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -28249,16 +28318,16 @@ const Contact = ()=>{
                                             type: "text",
                                             name: "subject",
                                             className: "form-control",
-                                            placeholder: "Subject",
+                                            placeholder: "Position / Subject",
                                             required: true
                                         }, void 0, false, {
                                             fileName: "src/Components/Contact.jsx",
-                                            lineNumber: 84,
+                                            lineNumber: 100,
                                             columnNumber: 17
                                         }, undefined)
                                     }, void 0, false, {
                                         fileName: "src/Components/Contact.jsx",
-                                        lineNumber: 83,
+                                        lineNumber: 99,
                                         columnNumber: 15
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -28271,39 +28340,40 @@ const Contact = ()=>{
                                             required: true
                                         }, void 0, false, {
                                             fileName: "src/Components/Contact.jsx",
-                                            lineNumber: 87,
+                                            lineNumber: 103,
                                             columnNumber: 17
                                         }, undefined)
                                     }, void 0, false, {
                                         fileName: "src/Components/Contact.jsx",
-                                        lineNumber: 86,
+                                        lineNumber: 102,
                                         columnNumber: 15
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                         className: "form-group mt-3",
                                         children: [
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                                                htmlFor: "file_upload",
+                                                htmlFor: "resume",
                                                 children: "Upload Resume (Optional)"
                                             }, void 0, false, {
                                                 fileName: "src/Components/Contact.jsx",
-                                                lineNumber: 90,
+                                                lineNumber: 106,
                                                 columnNumber: 17
                                             }, undefined),
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
                                                 type: "file",
                                                 className: "form-control",
-                                                id: "file_upload",
-                                                name: "file_upload"
+                                                id: "resume",
+                                                name: "resume",
+                                                accept: ".pdf,.doc,.docx"
                                             }, void 0, false, {
                                                 fileName: "src/Components/Contact.jsx",
-                                                lineNumber: 91,
+                                                lineNumber: 107,
                                                 columnNumber: 17
                                             }, undefined)
                                         ]
                                     }, void 0, true, {
                                         fileName: "src/Components/Contact.jsx",
-                                        lineNumber: 89,
+                                        lineNumber: 105,
                                         columnNumber: 15
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -28314,7 +28384,7 @@ const Contact = ()=>{
                                                 children: "Loading"
                                             }, void 0, false, {
                                                 fileName: "src/Components/Contact.jsx",
-                                                lineNumber: 94,
+                                                lineNumber: 110,
                                                 columnNumber: 17
                                             }, undefined),
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -28322,21 +28392,21 @@ const Contact = ()=>{
                                                 children: "Failed to send message. Please try again."
                                             }, void 0, false, {
                                                 fileName: "src/Components/Contact.jsx",
-                                                lineNumber: 95,
+                                                lineNumber: 111,
                                                 columnNumber: 17
                                             }, undefined),
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                                 className: `sent-message ${status === "success" ? "d-block" : ""}`,
-                                                children: "Your message has been sent. Thank you!"
+                                                children: "Your application has been sent. Thank you!"
                                             }, void 0, false, {
                                                 fileName: "src/Components/Contact.jsx",
-                                                lineNumber: 98,
+                                                lineNumber: 114,
                                                 columnNumber: 17
                                             }, undefined)
                                         ]
                                     }, void 0, true, {
                                         fileName: "src/Components/Contact.jsx",
-                                        lineNumber: 93,
+                                        lineNumber: 109,
                                         columnNumber: 15
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -28344,47 +28414,47 @@ const Contact = ()=>{
                                         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                                             type: "submit",
                                             disabled: status === "sending",
-                                            children: status === "sending" ? "Sending..." : "Send Message"
+                                            children: status === "sending" ? "Sending..." : "Submit Application"
                                         }, void 0, false, {
                                             fileName: "src/Components/Contact.jsx",
-                                            lineNumber: 103,
+                                            lineNumber: 119,
                                             columnNumber: 17
                                         }, undefined)
                                     }, void 0, false, {
                                         fileName: "src/Components/Contact.jsx",
-                                        lineNumber: 102,
+                                        lineNumber: 118,
                                         columnNumber: 15
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/Components/Contact.jsx",
-                                lineNumber: 74,
+                                lineNumber: 80,
                                 columnNumber: 13
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/Components/Contact.jsx",
-                            lineNumber: 73,
+                            lineNumber: 79,
                             columnNumber: 11
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/Components/Contact.jsx",
-                    lineNumber: 61,
+                    lineNumber: 67,
                     columnNumber: 9
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/Components/Contact.jsx",
-            lineNumber: 25,
+            lineNumber: 31,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/Components/Contact.jsx",
-        lineNumber: 24,
+        lineNumber: 30,
         columnNumber: 5
     }, undefined);
 };
-_s(Contact, "4zmeiINlBpT3fD0Bu+rn3M9VPms=");
+_s(Contact, "tFQEoWuxTnOS0Tj0020ukhuK2rw=");
 _c = Contact;
 exports.default = Contact;
 var _c;
@@ -28395,318 +28465,7 @@ $RefreshReg$(_c, "Contact");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","@emailjs/browser":"a603P","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"a603P":[function(require,module,exports,__globalThis) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "init", ()=>(0, _init.init));
-parcelHelpers.export(exports, "send", ()=>(0, _send.send));
-parcelHelpers.export(exports, "sendForm", ()=>(0, _sendForm.sendForm));
-parcelHelpers.export(exports, "EmailJSResponseStatus", ()=>(0, _emailJSResponseStatus.EmailJSResponseStatus));
-var _emailJSResponseStatus = require("./models/EmailJSResponseStatus");
-var _init = require("./methods/init/init");
-var _send = require("./methods/send/send");
-var _sendForm = require("./methods/sendForm/sendForm");
-exports.default = {
-    init: (0, _init.init),
-    send: (0, _send.send),
-    sendForm: (0, _sendForm.sendForm),
-    EmailJSResponseStatus: (0, _emailJSResponseStatus.EmailJSResponseStatus)
-};
-
-},{"./models/EmailJSResponseStatus":"1WuoF","./methods/init/init":"dOkWz","./methods/send/send":"iI9dV","./methods/sendForm/sendForm":"jnbcy","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"1WuoF":[function(require,module,exports,__globalThis) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "EmailJSResponseStatus", ()=>EmailJSResponseStatus);
-class EmailJSResponseStatus {
-    constructor(_status = 0, _text = 'Network Error'){
-        this.status = _status;
-        this.text = _text;
-    }
-}
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"dOkWz":[function(require,module,exports,__globalThis) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "init", ()=>init);
-var _store = require("../../store/store");
-var _buildOptions = require("../../utils/buildOptions/buildOptions");
-const init = (options, origin = 'https://api.emailjs.com')=>{
-    if (!options) return;
-    const opts = (0, _buildOptions.buildOptions)(options);
-    (0, _store.store).publicKey = opts.publicKey;
-    (0, _store.store).blockHeadless = opts.blockHeadless;
-    (0, _store.store).storageProvider = opts.storageProvider;
-    (0, _store.store).blockList = opts.blockList;
-    (0, _store.store).limitRate = opts.limitRate;
-    (0, _store.store).origin = opts.origin || origin;
-};
-
-},{"../../store/store":"4fI9K","../../utils/buildOptions/buildOptions":"4DaQ2","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"4fI9K":[function(require,module,exports,__globalThis) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "store", ()=>store);
-var _createWebStorage = require("../utils/createWebStorage/createWebStorage");
-const store = {
-    origin: 'https://api.emailjs.com',
-    blockHeadless: false,
-    storageProvider: (0, _createWebStorage.createWebStorage)()
-};
-
-},{"../utils/createWebStorage/createWebStorage":"jHOf2","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"jHOf2":[function(require,module,exports,__globalThis) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "createWebStorage", ()=>createWebStorage);
-const createWebStorage = ()=>{
-    if (typeof localStorage === 'undefined') return;
-    return {
-        get: (key)=>Promise.resolve(localStorage.getItem(key)),
-        set: (key, value)=>Promise.resolve(localStorage.setItem(key, value)),
-        remove: (key)=>Promise.resolve(localStorage.removeItem(key))
-    };
-};
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"4DaQ2":[function(require,module,exports,__globalThis) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "buildOptions", ()=>buildOptions);
-const buildOptions = (options)=>{
-    if (!options) return {};
-    // support compatibility with SDK v3
-    if (typeof options === 'string') return {
-        publicKey: options
-    };
-    // eslint-disable-next-line @typescript-eslint/no-base-to-string
-    if (options.toString() === '[object Object]') return options;
-    return {};
-};
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"iI9dV":[function(require,module,exports,__globalThis) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "send", ()=>send);
-var _store = require("../../store/store");
-var _sendPost = require("../../api/sendPost");
-var _buildOptions = require("../../utils/buildOptions/buildOptions");
-var _validateParams = require("../../utils/validateParams/validateParams");
-var _validateTemplateParams = require("../../utils/validateTemplateParams/validateTemplateParams");
-var _isHeadless = require("../../utils/isHeadless/isHeadless");
-var _headlessError = require("../../errors/headlessError/headlessError");
-var _isBlockedValueInParams = require("../../utils/isBlockedValueInParams/isBlockedValueInParams");
-var _blockedEmailError = require("../../errors/blockedEmailError/blockedEmailError");
-var _isLimitRateHit = require("../../utils/isLimitRateHit/isLimitRateHit");
-var _limitRateError = require("../../errors/limitRateError/limitRateError");
-const send = async (serviceID, templateID, templateParams, options)=>{
-    const opts = (0, _buildOptions.buildOptions)(options);
-    const publicKey = opts.publicKey || (0, _store.store).publicKey;
-    const blockHeadless = opts.blockHeadless || (0, _store.store).blockHeadless;
-    const storageProvider = opts.storageProvider || (0, _store.store).storageProvider;
-    const blockList = {
-        ...(0, _store.store).blockList,
-        ...opts.blockList
-    };
-    const limitRate = {
-        ...(0, _store.store).limitRate,
-        ...opts.limitRate
-    };
-    if (blockHeadless && (0, _isHeadless.isHeadless)(navigator)) return Promise.reject((0, _headlessError.headlessError)());
-    (0, _validateParams.validateParams)(publicKey, serviceID, templateID);
-    (0, _validateTemplateParams.validateTemplateParams)(templateParams);
-    if (templateParams && (0, _isBlockedValueInParams.isBlockedValueInParams)(blockList, templateParams)) return Promise.reject((0, _blockedEmailError.blockedEmailError)());
-    if (await (0, _isLimitRateHit.isLimitRateHit)(location.pathname, limitRate, storageProvider)) return Promise.reject((0, _limitRateError.limitRateError)());
-    const params = {
-        lib_version: '4.4.1',
-        user_id: publicKey,
-        service_id: serviceID,
-        template_id: templateID,
-        template_params: templateParams
-    };
-    return (0, _sendPost.sendPost)('/api/v1.0/email/send', JSON.stringify(params), {
-        'Content-type': 'application/json'
-    });
-};
-
-},{"../../store/store":"4fI9K","../../api/sendPost":"5EW2V","../../utils/buildOptions/buildOptions":"4DaQ2","../../utils/validateParams/validateParams":"jAKkF","../../utils/validateTemplateParams/validateTemplateParams":"lHgYV","../../utils/isHeadless/isHeadless":"2Mwsb","../../errors/headlessError/headlessError":"WMgRP","../../utils/isBlockedValueInParams/isBlockedValueInParams":"lP5HJ","../../errors/blockedEmailError/blockedEmailError":"gc0yo","../../utils/isLimitRateHit/isLimitRateHit":"jWiTH","../../errors/limitRateError/limitRateError":"28iDn","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"5EW2V":[function(require,module,exports,__globalThis) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "sendPost", ()=>sendPost);
-var _emailJSResponseStatus = require("../models/EmailJSResponseStatus");
-var _store = require("../store/store");
-const sendPost = async (url, data, headers = {})=>{
-    const response = await fetch((0, _store.store).origin + url, {
-        method: 'POST',
-        headers,
-        body: data
-    });
-    const message = await response.text();
-    const responseStatus = new (0, _emailJSResponseStatus.EmailJSResponseStatus)(response.status, message);
-    if (response.ok) return responseStatus;
-    throw responseStatus;
-};
-
-},{"../models/EmailJSResponseStatus":"1WuoF","../store/store":"4fI9K","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"jAKkF":[function(require,module,exports,__globalThis) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "validateParams", ()=>validateParams);
-const validateParams = (publicKey, serviceID, templateID)=>{
-    if (!publicKey || typeof publicKey !== 'string') throw 'The public key is required. Visit https://dashboard.emailjs.com/admin/account';
-    if (!serviceID || typeof serviceID !== 'string') throw 'The service ID is required. Visit https://dashboard.emailjs.com/admin';
-    if (!templateID || typeof templateID !== 'string') throw 'The template ID is required. Visit https://dashboard.emailjs.com/admin/templates';
-};
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"lHgYV":[function(require,module,exports,__globalThis) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "validateTemplateParams", ()=>validateTemplateParams);
-const validateTemplateParams = (templateParams)=>{
-    // eslint-disable-next-line @typescript-eslint/no-base-to-string
-    if (templateParams && templateParams.toString() !== '[object Object]') throw 'The template params have to be the object. Visit https://www.emailjs.com/docs/sdk/send/';
-};
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"2Mwsb":[function(require,module,exports,__globalThis) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "isHeadless", ()=>isHeadless);
-const isHeadless = (navigator)=>{
-    return navigator.webdriver || !navigator.languages || navigator.languages.length === 0;
-};
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"WMgRP":[function(require,module,exports,__globalThis) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "headlessError", ()=>headlessError);
-var _emailJSResponseStatus = require("../../models/EmailJSResponseStatus");
-const headlessError = ()=>{
-    return new (0, _emailJSResponseStatus.EmailJSResponseStatus)(451, 'Unavailable For Headless Browser');
-};
-
-},{"../../models/EmailJSResponseStatus":"1WuoF","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"lP5HJ":[function(require,module,exports,__globalThis) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "isBlockedValueInParams", ()=>isBlockedValueInParams);
-var _validateBlockListParams = require("../validateBlockListParams/validateBlockListParams");
-const isBlockListDisabled = (options)=>{
-    return !options.list?.length || !options.watchVariable;
-};
-const getValue = (data, name)=>{
-    return data instanceof FormData ? data.get(name) : data[name];
-};
-const isBlockedValueInParams = (options, params)=>{
-    if (isBlockListDisabled(options)) return false;
-    (0, _validateBlockListParams.validateBlockListParams)(options.list, options.watchVariable);
-    const value = getValue(params, options.watchVariable);
-    if (typeof value !== 'string') return false;
-    return options.list.includes(value);
-};
-
-},{"../validateBlockListParams/validateBlockListParams":"lqtGd","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"lqtGd":[function(require,module,exports,__globalThis) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "validateBlockListParams", ()=>validateBlockListParams);
-const validateBlockListParams = (list, watchVariable)=>{
-    if (!Array.isArray(list)) throw 'The BlockList list has to be an array';
-    if (typeof watchVariable !== 'string') throw 'The BlockList watchVariable has to be a string';
-};
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"gc0yo":[function(require,module,exports,__globalThis) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "blockedEmailError", ()=>blockedEmailError);
-var _emailJSResponseStatus = require("../../models/EmailJSResponseStatus");
-const blockedEmailError = ()=>{
-    return new (0, _emailJSResponseStatus.EmailJSResponseStatus)(403, 'Forbidden');
-};
-
-},{"../../models/EmailJSResponseStatus":"1WuoF","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"jWiTH":[function(require,module,exports,__globalThis) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "isLimitRateHit", ()=>isLimitRateHit);
-var _validateLimitRateParams = require("../validateLimitRateParams/validateLimitRateParams");
-const getLeftTime = async (id, throttle, storage)=>{
-    const lastTime = Number(await storage.get(id) || 0);
-    return throttle - Date.now() + lastTime;
-};
-const isLimitRateHit = async (defaultID, options, storage)=>{
-    if (!options.throttle || !storage) return false;
-    (0, _validateLimitRateParams.validateLimitRateParams)(options.throttle, options.id);
-    const id = options.id || defaultID;
-    const leftTime = await getLeftTime(id, options.throttle, storage);
-    if (leftTime > 0) return true;
-    await storage.set(id, Date.now().toString());
-    return false;
-};
-
-},{"../validateLimitRateParams/validateLimitRateParams":"aYk9u","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"aYk9u":[function(require,module,exports,__globalThis) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "validateLimitRateParams", ()=>validateLimitRateParams);
-const validateLimitRateParams = (throttle, id)=>{
-    if (typeof throttle !== 'number' || throttle < 0) throw 'The LimitRate throttle has to be a positive number';
-    if (id && typeof id !== 'string') throw 'The LimitRate ID has to be a non-empty string';
-};
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"28iDn":[function(require,module,exports,__globalThis) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "limitRateError", ()=>limitRateError);
-var _emailJSResponseStatus = require("../../models/EmailJSResponseStatus");
-const limitRateError = ()=>{
-    return new (0, _emailJSResponseStatus.EmailJSResponseStatus)(429, 'Too Many Requests');
-};
-
-},{"../../models/EmailJSResponseStatus":"1WuoF","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"jnbcy":[function(require,module,exports,__globalThis) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "sendForm", ()=>sendForm);
-var _store = require("../../store/store");
-var _sendPost = require("../../api/sendPost");
-var _buildOptions = require("../../utils/buildOptions/buildOptions");
-var _validateForm = require("../../utils/validateForm/validateForm");
-var _validateParams = require("../../utils/validateParams/validateParams");
-var _isHeadless = require("../../utils/isHeadless/isHeadless");
-var _headlessError = require("../../errors/headlessError/headlessError");
-var _isBlockedValueInParams = require("../../utils/isBlockedValueInParams/isBlockedValueInParams");
-var _blockedEmailError = require("../../errors/blockedEmailError/blockedEmailError");
-var _isLimitRateHit = require("../../utils/isLimitRateHit/isLimitRateHit");
-var _limitRateError = require("../../errors/limitRateError/limitRateError");
-const findHTMLForm = (form)=>{
-    return typeof form === 'string' ? document.querySelector(form) : form;
-};
-const sendForm = async (serviceID, templateID, form, options)=>{
-    const opts = (0, _buildOptions.buildOptions)(options);
-    const publicKey = opts.publicKey || (0, _store.store).publicKey;
-    const blockHeadless = opts.blockHeadless || (0, _store.store).blockHeadless;
-    const storageProvider = (0, _store.store).storageProvider || opts.storageProvider;
-    const blockList = {
-        ...(0, _store.store).blockList,
-        ...opts.blockList
-    };
-    const limitRate = {
-        ...(0, _store.store).limitRate,
-        ...opts.limitRate
-    };
-    if (blockHeadless && (0, _isHeadless.isHeadless)(navigator)) return Promise.reject((0, _headlessError.headlessError)());
-    const currentForm = findHTMLForm(form);
-    (0, _validateParams.validateParams)(publicKey, serviceID, templateID);
-    (0, _validateForm.validateForm)(currentForm);
-    const formData = new FormData(currentForm);
-    if ((0, _isBlockedValueInParams.isBlockedValueInParams)(blockList, formData)) return Promise.reject((0, _blockedEmailError.blockedEmailError)());
-    if (await (0, _isLimitRateHit.isLimitRateHit)(location.pathname, limitRate, storageProvider)) return Promise.reject((0, _limitRateError.limitRateError)());
-    formData.append('lib_version', '4.4.1');
-    formData.append('service_id', serviceID);
-    formData.append('template_id', templateID);
-    formData.append('user_id', publicKey);
-    return (0, _sendPost.sendPost)('/api/v1.0/email/send-form', formData);
-};
-
-},{"../../store/store":"4fI9K","../../api/sendPost":"5EW2V","../../utils/buildOptions/buildOptions":"4DaQ2","../../utils/validateForm/validateForm":"kPhol","../../utils/validateParams/validateParams":"jAKkF","../../utils/isHeadless/isHeadless":"2Mwsb","../../errors/headlessError/headlessError":"WMgRP","../../utils/isBlockedValueInParams/isBlockedValueInParams":"lP5HJ","../../errors/blockedEmailError/blockedEmailError":"gc0yo","../../utils/isLimitRateHit/isLimitRateHit":"jWiTH","../../errors/limitRateError/limitRateError":"28iDn","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"kPhol":[function(require,module,exports,__globalThis) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "validateForm", ()=>validateForm);
-const validateForm = (form)=>{
-    if (!form || form.nodeName !== 'FORM') throw 'The 3rd parameter is expected to be the HTML form element or the style selector of the form';
-};
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"6CuBd":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"6CuBd":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$a833 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 $parcel$ReactRefreshHelpers$a833.init();
 var prevRefreshReg = globalThis.$RefreshReg$;

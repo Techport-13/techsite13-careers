@@ -1,54 +1,28 @@
-import React, { useState, useRef } from "react";
-import emailjs from "@emailjs/browser";
+import React, { useState } from "react";
 
 const Contact = () => {
-  const form = useRef();
   const [status, setStatus] = useState("");
 
-  const sendEmail = (e) => {
+  const sendEmail = async (e) => {
     e.preventDefault();
     setStatus("sending");
-
-    const formData = new FormData(form.current);
-    const resumeFile = formData.get("resume");
-
-    const templateParams = {
-      applicant_name: formData.get("applicant_name"),
-      applicant_email: formData.get("applicant_email"),
-      source: formData.get("source"),
-      subject: formData.get("subject"),
-      message: formData.get("message"),
-      name: formData.get("applicant_name"),
-      email: formData.get("applicant_email"),
-      title: formData.get("subject")
-    };
-
-    const send = (params) => {
-      emailjs.send("service_19px7xt", "template_lyrqimq", params, "AD9kASCtB252sXVHL").then(
-        () => {
-          setStatus("success");
-          form.current.reset();
-        },
-        () => {
-          setStatus("error");
-        }
-      );
-    };
-
-    if (resumeFile && resumeFile.size > 0) {
-      const reader = new FileReader();
-      reader.onload = function() {
-        const result = reader.result;
-        const base64String = result.substring(result.indexOf(",") + 1);
-        templateParams.resume = {
-          name: resumeFile.name,
-          base64: base64String
-        };
-        send(templateParams);
-      };
-      reader.readAsDataURL(resumeFile);
-    } else {
-      send(templateParams);
+    
+    const formData = new FormData(e.target);
+    
+    try {
+      const res = await fetch("https://techport13-applicant-form.bpt3creations.workers.dev", {
+        method: "POST",
+        body: formData
+      });
+    
+      if (res.ok) {
+        setStatus("success");
+        e.target.reset();
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
     }
   };
 
@@ -103,7 +77,7 @@ const Contact = () => {
           </div>
 
           <div className="col-lg-6">
-            <form ref={form} onSubmit={sendEmail} className="php-email-form">
+            <form onSubmit={sendEmail} className="php-email-form">
               <div className="row">
                 <div className="col-md-6 form-group">
                   <input type="text" name="applicant_name" className="form-control" placeholder="Your Name" required />
