@@ -47,19 +47,11 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className="col-lg-3 col-md-6">
+          <div className="col-lg-6">
             <div className="info-box mb-4">
               <i className="bx bx-envelope"></i>
               <h3>Email Us</h3>
               <p>careers@techport13.com</p>
-            </div>
-          </div>
-
-          <div className="col-lg-3 col-md-6">
-            <div className="info-box mb-4">
-              <i className="bx bx-phone-call"></i>
-              <h3>Call Us</h3>
-              <p>+1 (404) 919-2660</p>
             </div>
           </div>
         </div>
@@ -78,12 +70,15 @@ const Contact = () => {
 
           <div className="col-lg-6">
             <form onSubmit={sendEmail} className="php-email-form">
-              <div className="row">
+              <div className="form-group">
+                <input type="text" name="applicant_name" className="form-control" placeholder="Your Name" required />
+              </div>
+              <div className="row mt-3">
                 <div className="col-md-6 form-group">
-                  <input type="text" name="applicant_name" className="form-control" placeholder="Your Name" required />
+                  <input type="email" name="applicant_email" className="form-control" placeholder="Your Email" required />
                 </div>
                 <div className="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="email" name="applicant_email" className="form-control" placeholder="Your Email" required />
+                  <input type="tel" name="applicant_phone" className="form-control" placeholder="Your Phone" required />
                 </div>
               </div>
               <div className="form-group mt-3">
@@ -92,15 +87,24 @@ const Contact = () => {
                   <option value="LinkedIn">LinkedIn</option>
                   <option value="Indeed">Indeed</option>
                   <option value="Referral">Referral</option>
+                  <option value="Career Fair">Career Fair</option>
                   <option value="Company Website">Company Website</option>
                   <option value="Other">Other</option>
                 </select>
               </div>
               <div className="form-group mt-3">
-                <input type="text" name="subject" className="form-control" placeholder="Position / Subject" required />
+                <select name="position_type" className="form-control" required>
+                  <option value="">Position Type</option>
+                  <option value="Full Time">Full Time</option>
+                  <option value="Internship">Internship</option>
+                </select>
               </div>
               <div className="form-group mt-3">
-                <textarea name="message" className="form-control" rows="5" placeholder="Message" required></textarea>
+                <label htmlFor="start_date">Available Start Date</label>
+                <input type="date" className="form-control" id="start_date" name="start_date" required />
+              </div>
+              <div className="form-group mt-3">
+                <textarea name="message" className="form-control" rows="5" placeholder="Tell us more about yourself..." required></textarea>
               </div>
               <div className="form-group mt-3">
                 <label htmlFor="resume">Upload Resume (Optional)</label>

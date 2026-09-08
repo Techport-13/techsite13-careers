@@ -28090,7 +28090,7 @@ const Contact = ()=>{
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "col-lg-3 col-md-6",
+                            className: "col-lg-6",
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                 className: "info-box mb-4",
                                 children: [
@@ -28125,43 +28125,6 @@ const Contact = ()=>{
                             fileName: "src/Components/Contact.jsx",
                             lineNumber: 50,
                             columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "col-lg-3 col-md-6",
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "info-box mb-4",
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
-                                        className: "bx bx-phone-call"
-                                    }, void 0, false, {
-                                        fileName: "src/Components/Contact.jsx",
-                                        lineNumber: 60,
-                                        columnNumber: 15
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                                        children: "Call Us"
-                                    }, void 0, false, {
-                                        fileName: "src/Components/Contact.jsx",
-                                        lineNumber: 61,
-                                        columnNumber: 15
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                        children: "+1 (404) 919-2660"
-                                    }, void 0, false, {
-                                        fileName: "src/Components/Contact.jsx",
-                                        lineNumber: 62,
-                                        columnNumber: 15
-                                    }, undefined)
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/Components/Contact.jsx",
-                                lineNumber: 59,
-                                columnNumber: 13
-                            }, undefined)
-                        }, void 0, false, {
-                            fileName: "src/Components/Contact.jsx",
-                            lineNumber: 58,
-                            columnNumber: 11
                         }, undefined)
                     ]
                 }, void 0, true, {
@@ -28187,12 +28150,12 @@ const Contact = ()=>{
                                 title: "Techport13 Location"
                             }, void 0, false, {
                                 fileName: "src/Components/Contact.jsx",
-                                lineNumber: 69,
+                                lineNumber: 61,
                                 columnNumber: 13
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/Components/Contact.jsx",
-                            lineNumber: 68,
+                            lineNumber: 60,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -28202,28 +28165,28 @@ const Contact = ()=>{
                                 className: "php-email-form",
                                 children: [
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                        className: "row",
+                                        className: "form-group",
+                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                                            type: "text",
+                                            name: "applicant_name",
+                                            className: "form-control",
+                                            placeholder: "Your Name",
+                                            required: true
+                                        }, void 0, false, {
+                                            fileName: "src/Components/Contact.jsx",
+                                            lineNumber: 74,
+                                            columnNumber: 17
+                                        }, undefined)
+                                    }, void 0, false, {
+                                        fileName: "src/Components/Contact.jsx",
+                                        lineNumber: 73,
+                                        columnNumber: 15
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "row mt-3",
                                         children: [
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                                 className: "col-md-6 form-group",
-                                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                                                    type: "text",
-                                                    name: "applicant_name",
-                                                    className: "form-control",
-                                                    placeholder: "Your Name",
-                                                    required: true
-                                                }, void 0, false, {
-                                                    fileName: "src/Components/Contact.jsx",
-                                                    lineNumber: 83,
-                                                    columnNumber: 19
-                                                }, undefined)
-                                            }, void 0, false, {
-                                                fileName: "src/Components/Contact.jsx",
-                                                lineNumber: 82,
-                                                columnNumber: 17
-                                            }, undefined),
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                                className: "col-md-6 form-group mt-3 mt-md-0",
                                                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
                                                     type: "email",
                                                     name: "applicant_email",
@@ -28232,18 +28195,36 @@ const Contact = ()=>{
                                                     required: true
                                                 }, void 0, false, {
                                                     fileName: "src/Components/Contact.jsx",
-                                                    lineNumber: 86,
+                                                    lineNumber: 78,
                                                     columnNumber: 19
                                                 }, undefined)
                                             }, void 0, false, {
                                                 fileName: "src/Components/Contact.jsx",
-                                                lineNumber: 85,
+                                                lineNumber: 77,
+                                                columnNumber: 17
+                                            }, undefined),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                className: "col-md-6 form-group mt-3 mt-md-0",
+                                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                                                    type: "tel",
+                                                    name: "applicant_phone",
+                                                    className: "form-control",
+                                                    placeholder: "Your Phone",
+                                                    required: true
+                                                }, void 0, false, {
+                                                    fileName: "src/Components/Contact.jsx",
+                                                    lineNumber: 81,
+                                                    columnNumber: 19
+                                                }, undefined)
+                                            }, void 0, false, {
+                                                fileName: "src/Components/Contact.jsx",
+                                                lineNumber: 80,
                                                 columnNumber: 17
                                             }, undefined)
                                         ]
                                     }, void 0, true, {
                                         fileName: "src/Components/Contact.jsx",
-                                        lineNumber: 81,
+                                        lineNumber: 76,
                                         columnNumber: 15
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -28258,7 +28239,7 @@ const Contact = ()=>{
                                                     children: "How did you hear about us?"
                                                 }, void 0, false, {
                                                     fileName: "src/Components/Contact.jsx",
-                                                    lineNumber: 91,
+                                                    lineNumber: 86,
                                                     columnNumber: 19
                                                 }, undefined),
                                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
@@ -28266,7 +28247,7 @@ const Contact = ()=>{
                                                     children: "LinkedIn"
                                                 }, void 0, false, {
                                                     fileName: "src/Components/Contact.jsx",
-                                                    lineNumber: 92,
+                                                    lineNumber: 87,
                                                     columnNumber: 19
                                                 }, undefined),
                                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
@@ -28274,7 +28255,7 @@ const Contact = ()=>{
                                                     children: "Indeed"
                                                 }, void 0, false, {
                                                     fileName: "src/Components/Contact.jsx",
-                                                    lineNumber: 93,
+                                                    lineNumber: 88,
                                                     columnNumber: 19
                                                 }, undefined),
                                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
@@ -28282,7 +28263,15 @@ const Contact = ()=>{
                                                     children: "Referral"
                                                 }, void 0, false, {
                                                     fileName: "src/Components/Contact.jsx",
-                                                    lineNumber: 94,
+                                                    lineNumber: 89,
+                                                    columnNumber: 19
+                                                }, undefined),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                                                    value: "Career Fair",
+                                                    children: "Career Fair"
+                                                }, void 0, false, {
+                                                    fileName: "src/Components/Contact.jsx",
+                                                    lineNumber: 90,
                                                     columnNumber: 19
                                                 }, undefined),
                                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
@@ -28290,7 +28279,7 @@ const Contact = ()=>{
                                                     children: "Company Website"
                                                 }, void 0, false, {
                                                     fileName: "src/Components/Contact.jsx",
-                                                    lineNumber: 95,
+                                                    lineNumber: 91,
                                                     columnNumber: 19
                                                 }, undefined),
                                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
@@ -28298,36 +28287,88 @@ const Contact = ()=>{
                                                     children: "Other"
                                                 }, void 0, false, {
                                                     fileName: "src/Components/Contact.jsx",
-                                                    lineNumber: 96,
+                                                    lineNumber: 92,
                                                     columnNumber: 19
                                                 }, undefined)
                                             ]
                                         }, void 0, true, {
                                             fileName: "src/Components/Contact.jsx",
-                                            lineNumber: 90,
+                                            lineNumber: 85,
                                             columnNumber: 17
                                         }, undefined)
                                     }, void 0, false, {
                                         fileName: "src/Components/Contact.jsx",
-                                        lineNumber: 89,
+                                        lineNumber: 84,
                                         columnNumber: 15
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                         className: "form-group mt-3",
-                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                                            type: "text",
-                                            name: "subject",
+                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("select", {
+                                            name: "position_type",
                                             className: "form-control",
-                                            placeholder: "Position / Subject",
-                                            required: true
-                                        }, void 0, false, {
+                                            required: true,
+                                            children: [
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                                                    value: "",
+                                                    children: "Position Type"
+                                                }, void 0, false, {
+                                                    fileName: "src/Components/Contact.jsx",
+                                                    lineNumber: 97,
+                                                    columnNumber: 19
+                                                }, undefined),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                                                    value: "Full Time",
+                                                    children: "Full Time"
+                                                }, void 0, false, {
+                                                    fileName: "src/Components/Contact.jsx",
+                                                    lineNumber: 98,
+                                                    columnNumber: 19
+                                                }, undefined),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                                                    value: "Internship",
+                                                    children: "Internship"
+                                                }, void 0, false, {
+                                                    fileName: "src/Components/Contact.jsx",
+                                                    lineNumber: 99,
+                                                    columnNumber: 19
+                                                }, undefined)
+                                            ]
+                                        }, void 0, true, {
                                             fileName: "src/Components/Contact.jsx",
-                                            lineNumber: 100,
+                                            lineNumber: 96,
                                             columnNumber: 17
                                         }, undefined)
                                     }, void 0, false, {
                                         fileName: "src/Components/Contact.jsx",
-                                        lineNumber: 99,
+                                        lineNumber: 95,
+                                        columnNumber: 15
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "form-group mt-3",
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                                                htmlFor: "start_date",
+                                                children: "Available Start Date"
+                                            }, void 0, false, {
+                                                fileName: "src/Components/Contact.jsx",
+                                                lineNumber: 103,
+                                                columnNumber: 17
+                                            }, undefined),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                                                type: "date",
+                                                className: "form-control",
+                                                id: "start_date",
+                                                name: "start_date",
+                                                required: true
+                                            }, void 0, false, {
+                                                fileName: "src/Components/Contact.jsx",
+                                                lineNumber: 104,
+                                                columnNumber: 17
+                                            }, undefined)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/Components/Contact.jsx",
+                                        lineNumber: 102,
                                         columnNumber: 15
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -28336,16 +28377,16 @@ const Contact = ()=>{
                                             name: "message",
                                             className: "form-control",
                                             rows: "5",
-                                            placeholder: "Message",
+                                            placeholder: "Tell us more about yourself...",
                                             required: true
                                         }, void 0, false, {
                                             fileName: "src/Components/Contact.jsx",
-                                            lineNumber: 103,
+                                            lineNumber: 107,
                                             columnNumber: 17
                                         }, undefined)
                                     }, void 0, false, {
                                         fileName: "src/Components/Contact.jsx",
-                                        lineNumber: 102,
+                                        lineNumber: 106,
                                         columnNumber: 15
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -28356,7 +28397,7 @@ const Contact = ()=>{
                                                 children: "Upload Resume (Optional)"
                                             }, void 0, false, {
                                                 fileName: "src/Components/Contact.jsx",
-                                                lineNumber: 106,
+                                                lineNumber: 110,
                                                 columnNumber: 17
                                             }, undefined),
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -28367,13 +28408,13 @@ const Contact = ()=>{
                                                 accept: ".pdf,.doc,.docx"
                                             }, void 0, false, {
                                                 fileName: "src/Components/Contact.jsx",
-                                                lineNumber: 107,
+                                                lineNumber: 111,
                                                 columnNumber: 17
                                             }, undefined)
                                         ]
                                     }, void 0, true, {
                                         fileName: "src/Components/Contact.jsx",
-                                        lineNumber: 105,
+                                        lineNumber: 109,
                                         columnNumber: 15
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -28384,7 +28425,7 @@ const Contact = ()=>{
                                                 children: "Loading"
                                             }, void 0, false, {
                                                 fileName: "src/Components/Contact.jsx",
-                                                lineNumber: 110,
+                                                lineNumber: 114,
                                                 columnNumber: 17
                                             }, undefined),
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -28392,7 +28433,7 @@ const Contact = ()=>{
                                                 children: "Failed to send message. Please try again."
                                             }, void 0, false, {
                                                 fileName: "src/Components/Contact.jsx",
-                                                lineNumber: 111,
+                                                lineNumber: 115,
                                                 columnNumber: 17
                                             }, undefined),
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -28400,13 +28441,13 @@ const Contact = ()=>{
                                                 children: "Your application has been sent. Thank you!"
                                             }, void 0, false, {
                                                 fileName: "src/Components/Contact.jsx",
-                                                lineNumber: 114,
+                                                lineNumber: 118,
                                                 columnNumber: 17
                                             }, undefined)
                                         ]
                                     }, void 0, true, {
                                         fileName: "src/Components/Contact.jsx",
-                                        lineNumber: 109,
+                                        lineNumber: 113,
                                         columnNumber: 15
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -28417,29 +28458,29 @@ const Contact = ()=>{
                                             children: status === "sending" ? "Sending..." : "Submit Application"
                                         }, void 0, false, {
                                             fileName: "src/Components/Contact.jsx",
-                                            lineNumber: 119,
+                                            lineNumber: 123,
                                             columnNumber: 17
                                         }, undefined)
                                     }, void 0, false, {
                                         fileName: "src/Components/Contact.jsx",
-                                        lineNumber: 118,
+                                        lineNumber: 122,
                                         columnNumber: 15
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/Components/Contact.jsx",
-                                lineNumber: 80,
+                                lineNumber: 72,
                                 columnNumber: 13
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/Components/Contact.jsx",
-                            lineNumber: 79,
+                            lineNumber: 71,
                             columnNumber: 11
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/Components/Contact.jsx",
-                    lineNumber: 67,
+                    lineNumber: 59,
                     columnNumber: 9
                 }, undefined)
             ]
